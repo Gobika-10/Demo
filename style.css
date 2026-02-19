@@ -1,0 +1,275 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #1E1E1E;
+    color: #fff;
+}
+
+/* NAVBAR */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 8%;
+    background: #121212;
+}
+
+.logo {
+    font-weight: 600;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav i {
+    color: #F59E0B;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ccc;
+    font-size: 14px;
+}
+
+.btn-nav {
+    border: 1px solid #F59E0B;
+    padding: 6px 15px;
+    border-radius: 20px;
+}
+
+.btn-nav:hover {
+    border: 1px solid #E5E7EB;
+    color: white;
+}
+
+nav a:hover {
+    text-shadow: 0 0 10px rgba(245, 158, 11, 0.5);
+}
+
+/* HERO */
+.hero {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 8%;
+    min-height: 90vh;
+}
+
+.hero-left h1 {
+    font-size: 48px;
+}
+
+.hero-left h2 {
+    font-size: 26px;
+    color: #F59E0B;
+    /* text-shadow: 0 0 10px rgba(245, 158, 11, 0.5); */
+    margin: 15px 0;
+}
+
+.desc {
+    color: #aaa;
+    margin-bottom: 20px;
+    max-width: 500px;
+}
+
+.hero-right img {
+    width: 350px;
+    height: fit-content;
+    object-fit: cover;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+.hero-right img {
+    filter: brightness(0.6) contrast(1.0);
+}
+
+
+.social-icons a {
+    margin-right: 10px;
+    color: #F59E0B;
+    font-size: 18px;
+}
+
+/* SKILLS STRIP */
+.skills-strip {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    background: #121212;
+    padding: 15px;
+    font-size: 14px;
+    color: #F59E0B;
+}
+
+/* ABOUT */
+.about {
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 8%;
+    gap: 40px;
+}
+
+.about-left h2 {
+    color: #F59E0B;
+    margin-bottom: 15px;
+}
+
+.about-left p {
+    color: #aaa;
+    margin-bottom: 20px;
+}
+
+.tech span {
+    display: inline-block;
+    background: #121212;
+    padding: 8px 14px;
+    margin: 5px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.about-right img {
+    width: 400px;
+    border-radius: 20px;
+
+}
+
+/* EXPERIENCE and education */
+
+.expertise {
+    background: #121212;
+    padding: 15px;
+    font-size: 14px;
+    text-align: center;
+    color: #F59E0B;
+}
+
+.experience {
+    display: flex;
+    justify-content: space-around;
+    padding: 80px 7%;
+    gap: 40px;
+}
+
+.card {
+
+    background: #121212;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 15px;
+}
+
+.card span {
+    display: block;
+    color: #aaa;
+    margin: 5px 0;
+}
+
+.card small {
+    color: #666;
+}
+
+.experience h3 {
+    color: #F59E0B;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-left: 4px solid #F59E0B;
+}
+
+/* project and awards */
+.projectsawards {
+    background: #121212;
+    padding: 15px;
+    font-size: 14px;
+    text-align: center;
+    color: #F59E0B;
+}
+
+.proawards {
+    display: flex;
+    justify-content: space-around;
+    padding: 80px 7%;
+    gap: 40px;
+}
+
+.proawards h3 {
+    color: #F59E0B;
+}
+
+.proawards p {
+    color: #aaa;
+}
+
+h2 {
+    animation: slide-right 1.8s ease-in-out both;
+}
+
+@keyframes slide-right {
+    from {
+        transform: translateX(-80vw);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive */
+
+@media (max-width: 600px) {
+
+    nav {
+        padding: 15px 5%;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav .btn-nav {
+        border: none;
+    }
+}
+
+@media (max-width: 992px) {
+
+    .hero,
+    .about,
+    .experience {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-right img {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .skills-strip {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+}
